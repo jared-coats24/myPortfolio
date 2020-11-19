@@ -18,9 +18,44 @@
      </header>
      <div class="bodyContainer">
             Contact Me
-            <div class="embedContainer">
+             <!-- <div class="embedContainer"> 
                 <embed class="responsive-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSdoG-eAXBgP7k9z0VeNVNCsaxozunAveo4O4N13hVRnNU_bHg/viewform" alt="This browser does not support PDFs. Please download the PDF to view it: Download PDF"></embed>
-              </div>
+              </div> -->
+              <form class="form"> 
+                <label for="name" style="font-style: italic; border-bottom: solid white;">Full Name* (<span style="color:rgb(255, 60, 0);">*Required</span>):</label>
+                <br><br>
+                <input type="name" id="name" name="name" required>  
+                <br><br>
+                <label for="email" style="font-style: italic; border-bottom: solid white;">Email* (<span style="color:rgb(255, 60, 0);">*Required</span>):</label>
+                <br><br>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                <label for="message" style="font-style: italic; border-bottom: solid white;">Message:</label>
+                <br><br>
+                <textarea name="contactMeMessage" rows="10" cols="25" maxlength="500" minlength="20">How can I help you? Enter your message here... </textarea>
+                <br><br>
+                <label for="how" style="font-style: italic; border-bottom: solid white;">How did you hear about me?</label>
+                <br><br>
+                <input type="checkbox" id="classmate" name="howCheck" value="classmate">
+                <label for="classmate"> Classmate</label><br>
+                <input type="checkbox" id="resumeSubmission" name="howCheck" value="resumeSubmission">
+                <label for="resumeSubmission"> Resume Submission</label><br>
+                <input type="checkbox" id="linkedIn" name="howCheck" value="linkedIn">
+                <label for="linkedIn">LinkedIn</label><br>
+                <input type="checkbox" id="caRec" name="howCheck" value="caRec">
+                <label for="caRec">Coding Academy Recommendation</label><br>
+                <br>
+                <label for="contactBack" style="font-style: italic; border-bottom: solid white;">Would you like the be contacted?* (<span style="color:rgb(255, 60, 0);">*Required</span>)</label>
+                <br><br>
+                <input type="radio" id="yes" name="yes_no" value="yes">
+                <label for="yes" >Yes</label><br>
+                <input type="radio" id="no" name="yes_no" value="no">
+                <label for="no">No</label><br>
+                <br><br>
+                <div class="buttonHolder">
+                <input type="button" id="submit" name="submit" value="Submit" class="button">
+                </div>
+            </form> 
         </div>
 </body>
 </html>

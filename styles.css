@@ -1,3 +1,4 @@
+/*Main/Cross Page Styling*/
 body{
     background-image: url(./images/background\ img2.jpg);
     background-size: 100% 100%, cover;
@@ -49,31 +50,23 @@ body{
     height: 100%;
    
 }
-
-.embedContainer{
+/*Embeded Content*/   
+/* .embedContainer{
         position: relative;
         overflow: hidden;
-        padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625)*/ 
+        padding-bottom: 56.25%; 
         max-width: 100%;
         height: 100%;
-}
-
-      /* Then style the iframe to fit in the container div with full height and width */
+} 
       .responsive-frame {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-      }
+      }*/
 
-/* Gallery Styling
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-  }
-  
+/*Portfolio Gallery*/    
   /* Create equal columns that sits next to each other */
   .row {
     display: flex;
@@ -131,6 +124,7 @@ body{
     margin: auto;
   }
 
+
 /* Responsive layout */
   @media screen and (max-width: 1100px) {
     .row {
@@ -139,8 +133,8 @@ body{
         justify-content: center;
       }
     .column {
-      flex: 60%;
-      max-width: 60%;
+      flex: 50%;
+      max-width: 50%;
     }
     #photoList{
         flex-direction: row;
@@ -161,6 +155,9 @@ body{
         width: 75%;
       
       }
+        .overlay {
+        opacity: 1;
+      }
 
     }
   
@@ -171,7 +168,6 @@ body{
         align-items: center;
         justify-content: center;
       }
-
     .column {
       flex: 100%;
       max-width: 100%;
@@ -183,6 +179,329 @@ body{
     #photoList{
         flex-direction: column;
         padding-left: 4%;
-    }   
+    }  
+    .overlay {
+        opacity: 1;
+      } 
     
   }
+
+/*Contact Form */  
+  .form{
+      text-align: center;
+      justify-content: center;
+      color: white;
+      margin: 1%;
+      padding: 5%;
+      background-color: rgba(3, 0, 60, 0.75);
+  }
+
+  .button{
+      background-color: white;
+      border: 3px solid yellow;
+      padding: 10px 20px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      color: rgba(3, 0, 60, 0.75);
+      font-weight: bold;
+  }
+
+  /*Resume */
+  /*
+  .grid-container {
+    margin: 10px;  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.25fr 0.25fr 0.75fr 0.25fr 0.5fr 0.25fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header"
+      "summaryTitle"
+      "summaryContent"
+      "educationTitle"
+      "educationContent"
+      "employmentTitle"
+      "employmentOceanSuns"
+      "employmentComStream";
+  }
+
+  .header { 
+    grid-area: header; 
+    text-align: center;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 100px;
+    grid-template-areas:
+      "header-img header-text";
+  }
+  
+  .header-img {
+    grid-area: header-img;
+    height: 150px;
+    width: 200px;
+    margin: 5px;
+  }
+
+img:hover {
+  opacity: 0;
+  } 
+ 
+.header-text{
+    grid-area: header-text;
+  }
+ 
+h1:active {
+  animation: fade;
+}
+
+h1 span {
+    background-color: black;
+  }
+
+ h1 span:hover {
+    background-color: white;
+  }
+
+  .summaryTitle { 
+    grid-area: summaryTitle; 
+    background-color: lightgray;
+  }
+  
+  .summaryContent { 
+    grid-area: summaryContent; 
+    padding: 10px;
+  }
+
+  .educationTitle { 
+    grid-area: educationTitle; 
+    background-color: lightgray;
+  }
+  
+  .educationContent { 
+    grid-area: educationContent; 
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "eduColumn1 eduColumn2";
+  }
+
+  .eduColumn1{
+    grid-area: eduColumn1;
+    text-align: left;
+  }
+
+  .eduColumn2{
+    grid-area: eduColumn2;
+    text-align: right;
+  }
+
+  .employmentTitle { 
+    grid-area: employmentTitle; 
+    background-color: lightgray;
+  }
+
+  .employmentOceanSuns { 
+    grid-area: employmentOceanSuns; 
+  }
+  
+  .employmentComStream { 
+    grid-area: employmentComStream; 
+  }
+  */
+
+.grid-container{
+    color: rgba(3, 0, 60, 0.97);
+}
+.summaryTitle{
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+.educationTitle{
+    background-color: rgba(255, 255, 255, 0.4);
+    }
+.employmentTitle{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+  @media (min-width: 400px) {
+    .grid-container {
+      margin: 10px;  
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1.25fr 0.15fr 0.5fr 0.15fr 0.40fr 0.15fr 0.5fr 0.5fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "header"
+        "summaryTitle"
+        "summaryContent"
+        "educationTitle"
+        "educationContent"
+        "employmentTitle"
+        "employmentOceanSuns"
+        "employmentComStream";
+    }
+    
+    .header { 
+      grid-area: header; 
+      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5 0.5fr;
+      gap: 0px 5px;
+      grid-template-areas:
+        "header-img"
+        "header-text";
+    }
+    .header-img {
+      grid-area: header-img;
+      height: 260px;
+      width: 205px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header-text{
+      grid-area: header-text;
+    }
+    .summaryTitle { 
+      grid-area: summaryTitle; 
+    }
+    
+    .summaryContent { 
+      grid-area: summaryContent; 
+      padding: 10px;
+    }
+  
+    .educationTitle { 
+      grid-area: educationTitle; 
+    }
+    
+    .educationContent { 
+      grid-area: educationContent; 
+      padding-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+      "eduColumn1 eduColumn2";
+    }
+  
+    .eduColumn1{
+      grid-area: eduColumn1;
+      text-align: left;
+    }
+  
+    .eduColumn2{
+      grid-area: eduColumn2;
+      text-align: right;
+    }
+  
+    .employmentTitle { 
+      grid-area: employmentTitle;
+    }
+  
+    .employmentOceanSuns { 
+      grid-area: employmentOceanSuns; 
+    }
+    
+    .employmentComStream { 
+      grid-area: employmentComStream; 
+    }
+
+}
+
+@media (min-width: 950px) {
+  .grid-container {
+    margin: 10px;  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.25fr 0.25fr 0.75fr 0.25fr 0.5fr 0.25fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header"
+      "summaryTitle"
+      "summaryContent"
+      "educationTitle"
+      "educationContent"
+      "employmentTitle"
+      "employmentOceanSuns"
+      "employmentComStream";
+  }
+
+  .header { 
+    grid-area: header; 
+    text-align: center;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 5px;
+    grid-template-areas:
+      "header-img header-text";
+  }
+
+  .header-img {
+    grid-area: header-img;
+    height: 260px;
+    width: 205px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+  }
+
+  .header-text{
+    grid-area: header-text;
+  }
+
+  .summaryTitle { 
+    grid-area: summaryTitle; 
+  }
+  
+  .summaryContent { 
+    grid-area: summaryContent; 
+    padding: 10px;
+  }
+
+  .educationTitle { 
+    grid-area: educationTitle;
+  }
+  
+  .educationContent { 
+    grid-area: educationContent; 
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "eduColumn1 eduColumn2";
+  }
+
+  .eduColumn1{
+    grid-area: eduColumn1;
+    text-align: left;
+  }
+
+  .eduColumn2{
+    grid-area: eduColumn2;
+    text-align: right;
+  }
+
+  .employmentTitle { 
+    grid-area: employmentTitle; 
+  }
+
+  .employmentOceanSuns { 
+    grid-area: employmentOceanSuns; 
+  }
+  
+  .employmentComStream { 
+    grid-area: employmentComStream; 
+  }
+}
