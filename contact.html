@@ -17,11 +17,11 @@
             </nav>
      </header>
      <div class="bodyContainer">
-            Contact Me
              <!-- <div class="embedContainer"> 
                 <embed class="responsive-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSdoG-eAXBgP7k9z0VeNVNCsaxozunAveo4O4N13hVRnNU_bHg/viewform" alt="This browser does not support PDFs. Please download the PDF to view it: Download PDF"></embed>
               </div> -->
-              <form class="form"> 
+              <form class="form" action="contactSubmission" method="POST" enctype="multipart/form-data" name=”EmailContactForm”> 
+                <span style="font-size: 16pt;">Contact Form</span><br><br><br>
                 <label for="name" style="font-style: italic; border-bottom: solid white;">Full Name* (<span style="color:rgb(255, 60, 0);">*Required</span>):</label>
                 <br><br>
                 <input type="name" id="name" name="name" required>  
@@ -32,7 +32,7 @@
                 <br><br>
                 <label for="message" style="font-style: italic; border-bottom: solid white;">Message:</label>
                 <br><br>
-                <textarea name="contactMeMessage" rows="10" cols="25" maxlength="500" minlength="20">How can I help you? Enter your message here... </textarea>
+                <textarea name="contactMeMessage" rows="10" cols="25" maxlength="500" minlength="20"></textarea>
                 <br><br>
                 <label for="how" style="font-style: italic; border-bottom: solid white;">How did you hear about me?</label>
                 <br><br>
@@ -53,7 +53,9 @@
                 <label for="no">No</label><br>
                 <br><br>
                 <div class="buttonHolder">
-                <input type="button" id="submit" name="submit" value="Submit" class="button">
+                <input type="button" id="submit" name="submit" value="Submit" class="button" onclick="window.open('https://jared-coats24.github.io/contactSubmission/')"><br><br>
+                <div class="buttonHolder"></div>
+                <input type="reset" id="reset" name="reset" value="Reset" class="button">
                 </div>
             </form> 
         </div>

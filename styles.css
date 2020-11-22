@@ -13,8 +13,6 @@ body{
     gap: 0px 10px;
     grid-template-areas:
       "navButton navButton navLogo navButton navButton";
-      
-
 }
 
 .navLogo{
@@ -42,14 +40,76 @@ body{
     color: white;
 }
 
+@media (max-width: 450px) {
+    .navBar{
+        font-size: 8pt;
+    }
+}
+
 .bodyContainer{
     padding: 1%;
     margin: 3%;
     background-color: rgba(255, 255, 255, 0.75);
     color: black;
-    height: 100%;
-   
+    height: 100%;  
 }
+
+/*Home page specific */
+
+.homeBodyContainer{
+    padding-top: 5%;
+    margin: 3%;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    width: auto;
+}
+
+.typewriter h1 {
+    width: auto;
+    display: inline-block;
+    font-size: 30pt;
+    color:white;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typwriter cursor */
+    white-space: nowrap; /*Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .1em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { max-width: 0}
+    to {max-width: 100%}
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+  }
+
+  .homeContent{
+    padding: 5%;
+    margin: 3%;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: rgba(1, 0, 29, 0.80);
+    height: 100%; 
+    font-size: 14pt;
+  }
+
+  @media (max-width: 450px) {
+    .typewriter h1{
+        font-size: 14pt;
+    }
+    .homeContent{
+        font-size: 12pt;
+    }
+  }
+
 /*Embeded Content*/   
 /* .embedContainer{
         position: relative;
@@ -193,7 +253,7 @@ body{
       color: white;
       margin: 1%;
       padding: 5%;
-      background-color: rgba(3, 0, 60, 0.75);
+      background-color: rgba(1, 0, 29, 0.80);
   }
 
   .button{
@@ -203,7 +263,7 @@ body{
       text-align: center;
       display: inline-block;
       font-size: 16px;
-      color: rgba(3, 0, 60, 0.75);
+      color: rgba(1, 0, 29, 0.80);
       font-weight: bold;
   }
 
@@ -315,7 +375,7 @@ h1 span {
   */
 
 .grid-container{
-    color: rgba(3, 0, 60, 0.97);
+    color: rgba(1, 0, 29, 0.8);
 }
 .summaryTitle{
       background-color: rgba(255, 255, 255, 0.4);
@@ -513,16 +573,18 @@ h1 span {
     margin-left: 30px;
     margin-right: 30px;
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     gap: 0px 30px;
     grid-template-areas:
-      "professional personal";
+      "professional"
+      "personal";
   }
 
 
 .professional {
       grid-area: professional;
+      border-bottom: dotted rgba(1, 0, 29, 0.8);
   }
 
 .personal {
@@ -533,15 +595,16 @@ h1 span {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 260px;
-    width: 205px;
+    height:300px; 
+    width: 250px; 
 }
 
-@media (min-width: 250px) {
+@media (max-width: 450px) {
   .about-grid-container {
+    text-align: center;
     margin-top: 5px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 0.5fr;
@@ -550,8 +613,16 @@ h1 span {
       "professional"
       "personal";
   }
+  .about-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px; 
+    width: 200px; 
+}
 }
 
+/*
 @media (min-width: 992px) {
   .about-grid-container {
   .margin-top: 5px;
@@ -564,4 +635,4 @@ h1 span {
   grid-template-areas:
     "professional personal";
   }
-}
+} */
